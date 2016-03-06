@@ -48,22 +48,6 @@ public class Field {
                 if (fieldModel.checkCell(x - 1, y + 1)) processCell(x - 1, y + 1);
                 if (fieldModel.checkCell(x - 1, y - 1)) processCell(x - 1, y - 1);
                 if (fieldModel.checkCell(x + 1, y - 1)) processCell(x + 1, y - 1);
-                /*if (fieldModel.checkCell(x + 1, y + 1) && fieldModel.getCellMinesCount(x + 1, y + 1) > 0) {
-                    fieldModel.setCellStatus(x + 1, y + 1, CellStatus.EMPTY_REVEALED);
-                    fieldView.drawCell(x + 1, y + 1, CellStatus.EMPTY_REVEALED);
-                }
-                if (fieldModel.checkCell(x + 1, y - 1) && fieldModel.getCellMinesCount(x + 1, y - 1) > 0) {
-                    fieldModel.setCellStatus(x + 1, y - 1, CellStatus.EMPTY_REVEALED);
-                    fieldView.drawCell(x + 1, y - 1, CellStatus.EMPTY_REVEALED);
-                }
-                if (fieldModel.checkCell(x - 1, y + 1) && fieldModel.getCellMinesCount(x - 1, y + 1) > 0) {
-                    fieldModel.setCellStatus(x - 1, y + 1, CellStatus.EMPTY_REVEALED);
-                    fieldView.drawCell(x - 1, y + 1, CellStatus.EMPTY_REVEALED);
-                }
-                if (fieldModel.checkCell(x - 1, y - 1) && fieldModel.getCellMinesCount(x - 1, y - 1) > 0) {
-                    fieldModel.setCellStatus(x - 1, y - 1, CellStatus.EMPTY_REVEALED);
-                    fieldView.drawCell(x - 1, y - 1, CellStatus.EMPTY_REVEALED);
-                }*/
             }
             else {
                 fieldModel.setCellStatus(x, y, CellStatus.EMPTY_REVEALED);
