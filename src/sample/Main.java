@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -9,7 +10,11 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import Field.Field;
@@ -57,8 +62,8 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
         primaryStage.setTitle("Minesweeper");
-        primaryStage.setResizable(true);
         BorderPane root = new BorderPane();
+        root.setBackground(new Background(new BackgroundFill(Color.color(0.87, 0.87, 0.87), CornerRadii.EMPTY, Insets.EMPTY)));
 
         MenuBar menuBar = new MenuBar();
         Menu optionsMenu = new Menu("Options");

@@ -47,11 +47,11 @@ abstract class FieldView {
         graphicsContext.setFill(CELL_COLOR);
         graphicsContext.fillRect(0, 0, canvasWidth, canvasHeight);
         graphicsContext.setStroke(BORDER_COLOR);
-        for (int i = 0; i < fieldModel.getYCells(); ++i) {
+        for (int i = 0; i <= fieldModel.getYCells(); ++i) {
             graphicsContext.moveTo(0, 0.5 + i * (BORDER_SIZE + CELL_SIZE));
             graphicsContext.lineTo(canvasWidth, 0.5 + i * (BORDER_SIZE + CELL_SIZE));
         }
-        for (int i = 0; i < fieldModel.getXCells(); ++i) {
+        for (int i = 0; i <= fieldModel.getXCells(); ++i) {
             graphicsContext.moveTo(0.5 + i * (BORDER_SIZE + CELL_SIZE), 0);
             graphicsContext.lineTo(0.5 + i * (BORDER_SIZE + CELL_SIZE), canvasHeight);
         }
