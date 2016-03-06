@@ -136,7 +136,7 @@ abstract class FieldView {
                 break;
 
             case 2:
-                color = Color.CHARTREUSE;
+                color = Color.GREEN;
                 break;
 
             case 3:
@@ -167,7 +167,7 @@ abstract class FieldView {
                 color = Color.BLACK;
                 break;
         }
-        printOnCell(Character.forDigit(minesCount, 10), color, startX, startY);
+        printOnCell(Character.forDigit(minesCount, 10), color, startX - 2, startY);
     }
 
     public void fillSavedCell(Color color) {
@@ -192,7 +192,7 @@ abstract class FieldView {
 
     public void printOnCell(char s, Color color, int startX, int startY) {
         graphicsContext.setStroke(color);
-        graphicsContext.strokeText(Character.toString(s), startX + CELL_SIZE / 2 - 14 / 2, startY + CELL_SIZE - 3);
+        graphicsContext.strokeText(Character.toString(s), startX + 5, startY + CELL_SIZE - 3);
     }
 
     /**

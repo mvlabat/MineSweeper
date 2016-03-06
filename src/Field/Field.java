@@ -7,6 +7,8 @@ import sample.Settings;
 public class Field {
     private FieldModel fieldModel;
     private FieldView fieldView;
+    private Canvas canvas;
+    private GraphicsContext graphicsContext;
     private boolean hasWon;
     private boolean hasLost;
     private int lastMouseX;
@@ -14,11 +16,13 @@ public class Field {
 
     public Field(Canvas canvas, GraphicsContext graphicsContext, Settings settings) {
         fieldModel = new FieldModel();
-        fieldView = new PlayingFieldView(fieldModel, canvas, graphicsContext);
+        this.graphicsContext = graphicsContext;
+        this.canvas = canvas;
         setNewField(settings);
     }
 
     public void setNewField(Settings settings) {
+        fieldView = new PlayingFieldView(fieldModel, canvas, graphicsContext);
         hasWon = false;
         hasLost = false;
         fieldModel.setNewField(settings);
