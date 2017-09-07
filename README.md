@@ -1,6 +1,5 @@
 # MineSweeper
 MineSweeper game written in Java using JavaFX framework.
-This project is done as a task at my university.
 
 ## Requirements
 * JDK 1.8 (enough for both building and running)
